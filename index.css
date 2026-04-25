@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* PDF Export Polish */
+.pdf-export-header {
+  display: none;
+}
+
+.pdf-mode .pdf-export-header {
+  display: flex !important;
+}
+
+.pdf-mode .pdf-center-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.pdf-mode .pdf-justify-text {
+  text-align: justify !important;
+}

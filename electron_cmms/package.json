@@ -1,0 +1,63 @@
+{
+  "name": "cmms-local-pro",
+  "version": "3.2.0",
+  "description": "Sistema de Gestión de Mantenimiento Industrial Local - Pro Edition",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "vite",
+    "build:ui": "vite build",
+    "build:electron": "electron-builder",
+    "build": "npm run build:ui && npm run build:electron"
+  },
+  "keywords": [
+    "cmms",
+    "mantenimiento",
+    "industrial",
+    "electron",
+    "react"
+  ],
+  "author": "CMMS Expert Architect",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "lucide-react": "^0.446.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.2",
+    "motion": "^12.0.0-alpha.12",
+    "recharts": "^2.12.7",
+    "jspdf": "^2.5.1",
+    "html2canvas": "^1.4.1"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@tailwindcss/vite": "^4.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.45",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.0",
+    "typescript": "^5.5.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  },
+  "build": {
+    "appId": "com.cmms.localpro",
+    "productName": "CMMS Local Pro",
+    "win": {
+      "target": "portable",
+      "icon": "icon.ico"
+    },
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "dist_ui/**/*",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ]
+  }
+}
